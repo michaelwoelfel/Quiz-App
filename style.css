@@ -1,0 +1,18 @@
+body {
+    background-color: #F7F7F7 !important;
+    
+}
+.navbar-brand {
+    background-color: silver !important;
+}
+
+.maincontainer {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
