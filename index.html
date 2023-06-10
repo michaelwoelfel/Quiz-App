@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+  <script src="data.js"></script>
   <!-- Bootstrap Files -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -23,25 +25,25 @@
   <div class="maincontainer">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
-        <img src="img/logo.png">
+        <img class="logo" src="img/logo.png">
      
         <a onclick="initHTML()" class="linksidebar">
-          <div class="headingsidebar" tabindex="1">
+          <div  id="headinghtml"class="headingsidebar" tabindex="1">
             <h3>HTML</h3>
           </div>
         </a>
         <a onclick="initCSS()"  class="linksidebar" >
-          <div class="headingsidebar" tabindex="1">
+          <div id="headingcss" class="headingsidebar" tabindex="1">
             <h3>CSS</h3>
           </div>
         </a>
         <a  onclick="initJS()" class="linksidebar" >
-          <div class="headingsidebar" tabindex="1">
+          <div id="headingjs" class="headingsidebar" tabindex="1">
             <h3>JS</h3>
           </div>
         </a>
         <a onclick="initJAVA()" class="linksidebar">
-          <div class="headingsidebar"tabindex="1">
+          <div id="headingjava" class="headingsidebar"tabindex="1">
             <h3>JAVA</h3>
           </div>
         </a>
@@ -49,10 +51,28 @@
 
       </div>
     </nav>
-
-    <div class="containercard">
+    <div id="startscreen" class="containercard">
       <div class="card" style="width: 18rem;">
 
+       
+          
+            <h1>Welcome to The Awesome Quiz</h1>
+            <h3>Choose Quiz</h3>
+            <div class="buttons">
+              <button onclick="startGame()" class="btn"><span></span>
+                <p data-start="good luck!" data-text="start!" data-title="new game"></p>
+              </button>
+            </div>
+          
+        
+      </div>
+    </div>
+
+    <div id="questionscreen" class="containercard">
+      <div class="card" style="width: 18rem;">
+        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+          <div id="questionprogress" style = 'width: 0%'  class="progress-bar progress-bar-striped progress-bar-animated"></div>
+        </div>
         <div class="card-body">
           <h5 class="card-title" id="questiontext">Frage</h5>
           <ul id="questions" class="list-group list-group-flush">
@@ -66,15 +86,40 @@
       </div>
     </div>
 
+    <div id="endscreen" class=containercard>
+      <div class="card-endscreen" style="width: 18rem;">
+        <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+          <div id="questionprogress" style = 'width: 100%'  class="progress-bar progress-bar-striped progress-bar-animated"></div>
+        </div>
+           <div class="endimage"> <img class="brainresult" src="img/brain result.png"></div>
+        <div class="card-body-endscreen">
+        <h1>Quiz Completed</h1>
+        <h3 id="yourscore">Your Score: <span id="rightquestions">10</span><span id="questionlenght2">/</span></h3>
+        <div class="trophycontainer"><img id="rotate-vert-left"  class="trophy" src="img/tropy.png"></div>
+        <div id="buttonnewgame" class="buttons">
+          <button onclick="newGame()" class="btn"><span></span>
+            <p data-start="good luck!" data-text="start!" data-title="new game"></p>
+          </button>
+        </div>
+       
+        </div>
+      </div>
+    </div>
+    </div>
+
+
   </div>
 </body>
 
 </html>
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-  <div class="buttons">
-    <button class="btn"><span></span>
-      <p data-start="good luck!" data-text="start!" data-title="new game"></p>
-    </button>
+<div id="endscreen" class=containercard>
+  <div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+    
+    </div>
   </div>
 </div>
+
+
